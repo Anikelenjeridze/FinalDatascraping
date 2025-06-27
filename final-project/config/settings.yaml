@@ -1,0 +1,15 @@
+# General application settings
+database:
+  type: sqlite
+  path: "data_output/product_prices.db"
+logging:
+  level: "INFO"
+  file: "app.log"
+output_paths:
+  raw_data: "data_output/raw/"
+  processed_data: "data_output/processed/"
+  reports: "data_output/reports/"
+scraper_settings:
+  timeout: 30
+  default_user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+  rate_limit_delay: 2 # seconds

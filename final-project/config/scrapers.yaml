@@ -1,0 +1,28 @@
+# Configuration for each scraper target
+# Note: Selectors will need to be updated periodically as websites change.
+amazon:
+  base_url: "https://www.amazon.com/s?k={query}"
+  product_container: '[data-component-type="s-search-result"]'
+  data_selectors:
+    title: "h2 a.a-link-normal span.a-text-normal"
+    price: "span.a-price span.a-offscreen"
+    url: "h2 a.a-link-normal"
+    rating: "span.a-icon-alt"
+  # Amazon is highly dynamic and requires Selenium
+  type: "selenium"
+
+ebay:
+  base_url: "https://www.ebay.com/sch/i.html?_nkw={query}"
+  # Scrapy will handle this one
+  type: "scrapy"
+
+bestbuy:
+  # A simpler, more static-friendly site for BeautifulSoup/Requests
+  base_url: "https://www.bestbuy.com/site/searchpage.jsp?st={query}"
+  product_container: ".sku-item"
+  data_selectors:
+    title: "h4.sku-title a"
+    price: ".priceView-hero-price.priceView-customer-price span[aria-hidden='true']"
+    url: "h4.sku-title a"
+    rating: ".average-rating" # Not always present
+  type: "static"
