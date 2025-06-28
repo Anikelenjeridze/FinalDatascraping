@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Scraping Report: {{ query }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding: 2rem; }
+        .card-title { color: #0d6efd; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Price Analysis Report</h1>
+        <h2 class="text-muted mb-4">Search Query: "{{ query }}"</h2>
+        <p><em>Report generated on: {{ generation_date }}</em></p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Listings Found</h5>
+                        <p class="card-text fs-2">{{ analysis.total_records }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                 <div class="card text-center mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Average Price</h5>
+                        <p class="card-text fs-2">{{ analysis.avg_price }}</p>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-4">
+                <div class="card text-center mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Cheapest Item</h5>
+                        <p class="card-text"><strong>${{ "%.2f"|format(analysis.min_price_item.price) }}</strong> on {{ analysis.min_price_item.source }}</p>
+                        <a href="{{ analysis.min_price_item.url }}" target="_blank" class="btn btn-sm btn-success">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-5">Price Comparison by Retailer</h3>
+        <img src="{{ plot_path }}" alt="Price Comparison Chart" class="img-fluid my-4 border rounded">
+
+        <h3 class="mt-5">All Scraped Data</h3>
+        <div class="table-responsive">
+            {{ products_table|safe }}
+        </div>
+    </div>
+</body>
+</html>
