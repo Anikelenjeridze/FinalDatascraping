@@ -1,0 +1,13 @@
+
+beautifulsoup4
+click
+Jinja2
+matplotlib
+numpy # Often a dependency for pandas/matplotlib
+pandas
+PyYAML
+requests
+selenium
+webdriver-manager
+Scrapy
+pytest
