@@ -3,7 +3,7 @@ database:
   type: sqlite
   path: "data_output/product_prices.db"
 logging:
-  level: "INFO"
+  level: "DEBUG"
   file: "app.log"
 output_paths:
   raw_data: "data_output/raw/"

@@ -1,14 +1,17 @@
 # Configuration for each scraper target
 # Note: Selectors will need to be updated periodically as websites change.
+# In config/scrapers.yaml
+# In config/scrapers.yaml
 amazon:
   base_url: "https://www.amazon.com/s?k={query}"
   product_container: '[data-component-type="s-search-result"]'
   data_selectors:
-    title: "h2 a.a-link-normal span.a-text-normal"
-    price: "span.a-price span.a-offscreen"
-    url: "h2 a.a-link-normal"
-    rating: "span.a-icon-alt"
-  # Amazon is highly dynamic and requires Selenium
+    # This selector is very specific to the main title text
+    title: "span.a-size-medium.a-color-base.a-text-normal"
+    # This selector is more general for the price, looking for the hidden text
+    price: ".a-price .a-offscreen"
+    url: "a.a-link-normal.s-underline-text.s-underline-link-text.s-link-style.a-text-normal"
+    rating: ".a-icon-alt"
   type: "selenium"
 
 ebay:
