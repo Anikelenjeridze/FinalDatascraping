@@ -2,16 +2,18 @@
 # Note: Selectors will need to be updated periodically as websites change.
 # In config/scrapers.yaml
 # In config/scrapers.yaml
+# In config/scrapers.yaml
+
+# Search URL template for Amazon
 amazon:
   base_url: "https://www.amazon.com/s?k={query}"
   product_container: '[data-component-type="s-search-result"]'
   data_selectors:
-    # This selector is very specific to the main title text
+    # These CSS selectors target individual elements within each product block
     title: "span.a-size-medium.a-color-base.a-text-normal"
-    # This selector is more general for the price, looking for the hidden text
-    price: ".a-price .a-offscreen"
+    price: "span.a-price > span.a-offscreen"
     url: "a.a-link-normal.s-underline-text.s-underline-link-text.s-link-style.a-text-normal"
-    rating: ".a-icon-alt"
+    rating: "span.a-icon-alt"
   type: "selenium"
 
 ebay:
@@ -19,6 +21,7 @@ ebay:
   # Scrapy will handle this one
   type: "scrapy"
 
+# BestBuy has a fairly static structure that's easier to parse with BeautifulSoup
 bestbuy:
   # A simpler, more static-friendly site for BeautifulSoup/Requests
   base_url: "https://www.bestbuy.com/site/searchpage.jsp?st={query}"

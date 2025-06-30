@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta and Bootstrap setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Price Scraping Report: {{ query }}</title>
@@ -12,10 +13,12 @@
 </head>
 <body>
     <div class="container">
+        <!-- Report Header -->
         <h1 class="mb-4">Price Analysis Report</h1>
         <h2 class="text-muted mb-4">Search Query: "{{ query }}"</h2>
         <p><em>Report generated on: {{ generation_date }}</em></p>
 
+  <!-- Summary Cards: Total Listings, Average Price, Cheapest Item -->
         <div class="row">
             <div class="col-md-4">
                 <div class="card text-center mb-3">
@@ -34,6 +37,7 @@
                 </div>
             </div>
              <div class="col-md-4">
+                <!-- Cheapest Item -->
                 <div class="card text-center mb-3">
                     <div class="card-body">
                         <h5 class="card-title">Cheapest Item</h5>

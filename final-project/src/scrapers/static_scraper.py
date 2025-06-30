@@ -16,17 +16,19 @@ class StaticScraper(BaseScraper):
         logger.info(f"[{self.site_name}] Scraping {search_url}")
 
         try:
+             # Set headers to mimic a browser
             headers = {'User-Agent': SETTINGS['scraper_settings']['default_user_agent']}
             response = requests.get(search_url, headers=headers, timeout=SETTINGS['scraper_settings']['timeout'])
             response.raise_for_status()
             
             time.sleep(SETTINGS['scraper_settings']['rate_limit_delay']) # Rate limiting
-
+              # Parse the HTML with BeautifulSoup
             soup = BeautifulSoup(response.text, 'html.parser')
             items = soup.select(self.config['product_container'])
             logger.info(f"[{self.site_name}] Found {len(items)} items for query '{query}'.")
 
             for item in items:
+                # Loop through each product item
                 try:
                     title_elem = item.select_one(self.config['data_selectors']['title'])
                     price_elem = item.select_one(self.config['data_selectors']['price'])
@@ -42,7 +44,7 @@ class StaticScraper(BaseScraper):
                         url = base_site_url + url_elem['href']
                     else:
                         continue
-
+ # Save only meaningful results (non-empty title and non-zero price)
                     if title != "N/A" and price > 0.0:
                         products.append(Product(
                             query=query, source=self.site_name, title=title, price=price, url=url
@@ -50,7 +52,7 @@ class StaticScraper(BaseScraper):
                 except Exception as e:
                     logger.warning(f"[{self.site_name}] Could not parse an item: {e}")
             
-            return products
+            return products # Return the final list of products
 
         except requests.RequestException as e:
             logger.error(f"[{self.site_name}] HTTP request failed: {e}")
