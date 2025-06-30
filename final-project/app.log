@@ -3158,3 +3158,75 @@ Stacktrace:
 
 2025-06-30 18:29:58,127 - uc - INFO - ensuring close
 2025-06-30 18:29:58,173 - uc - DEBUG - webdriver process ended
+2025-06-30 18:48:03,488 - matplotlib - DEBUG - matplotlib data path: C:\Users\user\Desktop\finalpy\final-project\venv\Lib\site-packages\matplotlib\mpl-data
+2025-06-30 18:48:03,488 - matplotlib - DEBUG - CONFIGDIR=C:\Users\user\.matplotlib
+2025-06-30 18:48:03,488 - matplotlib - DEBUG - interactive is False
+2025-06-30 18:48:03,495 - matplotlib - DEBUG - platform is win32
+2025-06-30 18:48:03,537 - matplotlib - DEBUG - CACHEDIR=C:\Users\user\.matplotlib
+2025-06-30 18:48:03,551 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2025-06-30 18:48:03,798 - src.utils.logger - INFO - Database table 'products' is ready.
+2025-06-30 18:48:03,798 - src.utils.logger - INFO - Starting scrape task for 'ebay' with query 'iPhone 15'
+2025-06-30 18:48:04,532 - src.utils.logger - ERROR - Scrapy crawl failed with exit code 2.
+2025-06-30 18:48:04,532 - src.utils.logger - ERROR - This is the REAL error from Scrapy: 
+---_BEGIN_SCRAPY_ERROR_---
+
+---_END_SCRAPY_ERROR_---
+2025-06-30 18:48:39,181 - matplotlib - DEBUG - matplotlib data path: C:\Users\user\Desktop\finalpy\final-project\venv\Lib\site-packages\matplotlib\mpl-data
+2025-06-30 18:48:39,181 - matplotlib - DEBUG - CONFIGDIR=C:\Users\user\.matplotlib
+2025-06-30 18:48:39,181 - matplotlib - DEBUG - interactive is False
+2025-06-30 18:48:39,181 - matplotlib - DEBUG - platform is win32
+2025-06-30 18:48:39,249 - matplotlib - DEBUG - CACHEDIR=C:\Users\user\.matplotlib
+2025-06-30 18:48:39,251 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2025-06-30 18:48:39,499 - src.utils.logger - INFO - Database table 'products' is ready.
+2025-06-30 18:48:39,513 - src.utils.logger - INFO - Starting scrape task for 'amazon' with query 'iPhone 15'
+2025-06-30 18:48:39,513 - src.utils.logger - INFO - [amazon] Scraping https://www.amazon.com/s?k=iPhone+15 with FINAL stealth configuration.
+2025-06-30 18:48:39,516 - undetected_chromedriver.patcher - DEBUG - getting release number from /latest-versions-per-milestone-with-downloads.json
+2025-06-30 18:48:39,886 - undetected_chromedriver.patcher - DEBUG - downloading from https://storage.googleapis.com/chrome-for-testing-public/137.0.7151.119/win32/chromedriver-win32.zip
+2025-06-30 18:48:42,356 - undetected_chromedriver.patcher - DEBUG - unzipping C:\Users\user\AppData\Local\Temp\tmpbw166cl7
+2025-06-30 18:48:42,496 - undetected_chromedriver.patcher - INFO - patching driver executable C:\Users\user\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-06-30 18:48:42,681 - undetected_chromedriver.patcher - DEBUG - found block:
+b'{window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Proxy = window.Proxy;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;window.cdc_adoQpoasnfa76pfcZLmcfl_JSON = window.JSON;window.cdc_adoQpoasnfa76pfcZLmcfl_Window = window.Window;}'
+replacing with:
+b'{console.log("undetected chromedriver 1337!")}                                                                                                                                                                                                                                                                                                                                                             '
+2025-06-30 18:48:42,686 - undetected_chromedriver.patcher - DEBUG - patching took us 0.19 seconds
+2025-06-30 18:48:42,839 - uc - DEBUG - user-data-dir found in user argument user-data-dir=./chrome_profile => ./chrome_profile
+2025-06-30 18:48:42,839 - uc - DEBUG - checking if C:\Program Files\Google/Chrome/Application\chrome.exe exists and is executable
+2025-06-30 18:48:42,839 - uc - DEBUG - found! using C:\Program Files\Google/Chrome/Application\chrome.exe
+2025-06-30 18:48:42,839 - uc - DEBUG - did not find a bad exit_type flag 
+2025-06-30 18:48:42,852 - selenium.webdriver.common.driver_finder - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: C:\Users\user\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-06-30 18:48:43,078 - selenium.webdriver.common.service - DEBUG - Started executable: `C:\Users\user\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe` in a child process with pid: 22260 using 0 to output -3
+2025-06-30 18:48:43,606 - selenium.webdriver.remote.remote_connection - DEBUG - POST http://localhost:58607/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': ['user-data-dir=./chrome_profile', '--remote-debugging-host=127.0.0.1', '--remote-debugging-port=58606', '--lang=ka-GE', '--no-default-browser-check', '--no-first-run', '--no-sandbox', '--test-type', '--window-size=1920,1080', '--start-maximized', '--no-sandbox', '--log-level=0'], 'debuggerAddress': '127.0.0.1:58606'}}}}
+2025-06-30 18:48:43,606 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): localhost:58607
+2025-06-30 18:49:44,202 - urllib3.connectionpool - DEBUG - http://localhost:58607 "POST /session HTTP/1.1" 500 0
+2025-06-30 18:49:44,202 - selenium.webdriver.remote.remote_connection - DEBUG - Remote response: status=500 | data={"value":{"error":"session not created","message":"session not created: cannot connect to chrome at 127.0.0.1:58606\nfrom chrome not reachable","stacktrace":"\tGetHandleVerifier [0x0x11b3b03+62899]\n\tGetHandleVerifier [0x0x11b3b44+62964]\n\t(No symbol) [0x0xfe0f50]\n\t(No symbol) [0x0xfd4cca]\n\t(No symbol) [0x0x1019c66]\n\t(No symbol) [0x0x10104cf]\n\t(No symbol) [0x0x1010306]\n\t(No symbol) [0x0x105a36a]\n\t(No symbol) [0x0x1059c0a]\n\t(No symbol) [0x0x104e306]\n\t(No symbol) [0x0x101d670]\n\t(No symbol) [0x0x101e4e4]\n\tGetHandleVerifier [0x0x1414793+2556483]\n\tGetHandleVerifier [0x0x140fd02+2537394]\n\tGetHandleVerifier [0x0x11da2fa+220586]\n\tGetHandleVerifier [0x0x11caae8+157080]\n\tGetHandleVerifier [0x0x11d141d+184013]\n\tGetHandleVerifier [0x0x11bba68+95512]\n\tGetHandleVerifier [0x0x11bbc10+95936]\n\tGetHandleVerifier [0x0x11a6b5a+9738]\n\tBaseThreadInitThunk [0x0x76217ba9+25]\n\tRtlInitializeExceptionChain [0x0x77a7c10b+107]\n\tRtlClearBits [0x0x77a7c08f+191]\n"}} | headers=HTTPHeaderDict({'Content-Length': '991', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-06-30 18:49:44,202 - selenium.webdriver.remote.remote_connection - DEBUG - Finished Request
+2025-06-30 18:49:46,221 - uc - DEBUG - webdriver process ended
+2025-06-30 18:49:46,222 - src.utils.logger - ERROR - [amazon] A critical error occurred: Message: session not created: cannot connect to chrome at 127.0.0.1:58606
+from chrome not reachable
+Stacktrace:
+	GetHandleVerifier [0x0x11b3b03+62899]
+	GetHandleVerifier [0x0x11b3b44+62964]
+	(No symbol) [0x0xfe0f50]
+	(No symbol) [0x0xfd4cca]
+	(No symbol) [0x0x1019c66]
+	(No symbol) [0x0x10104cf]
+	(No symbol) [0x0x1010306]
+	(No symbol) [0x0x105a36a]
+	(No symbol) [0x0x1059c0a]
+	(No symbol) [0x0x104e306]
+	(No symbol) [0x0x101d670]
+	(No symbol) [0x0x101e4e4]
+	GetHandleVerifier [0x0x1414793+2556483]
+	GetHandleVerifier [0x0x140fd02+2537394]
+	GetHandleVerifier [0x0x11da2fa+220586]
+	GetHandleVerifier [0x0x11caae8+157080]
+	GetHandleVerifier [0x0x11d141d+184013]
+	GetHandleVerifier [0x0x11bba68+95512]
+	GetHandleVerifier [0x0x11bbc10+95936]
+	GetHandleVerifier [0x0x11a6b5a+9738]
+	BaseThreadInitThunk [0x0x76217ba9+25]
+	RtlInitializeExceptionChain [0x0x77a7c10b+107]
+	RtlClearBits [0x0x77a7c08f+191]
+
+2025-06-30 18:49:46,246 - uc - INFO - ensuring close
+2025-06-30 18:49:46,303 - uc - DEBUG - webdriver process ended

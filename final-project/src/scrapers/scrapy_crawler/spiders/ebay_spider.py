@@ -1,6 +1,9 @@
+# spiders/ebay_spider.py
+
 import scrapy
-from ..items import ProductItem
-from src.data.processors import clean_price, clean_title
+# This import goes up one level from 'spiders' to 'scrapy_crawler' to find items.py
+from ..items import ProductItem 
+from ...data.processors import clean_price, clean_title # This also needs to be adjusted
 from datetime import datetime
 
 class EbaySpider(scrapy.Spider):

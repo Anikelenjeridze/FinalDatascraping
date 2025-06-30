@@ -1,3 +1,4 @@
+# items.py in src/scrapers/scrapy_crawler/
 import scrapy
 
 class ProductItem(scrapy.Item):
