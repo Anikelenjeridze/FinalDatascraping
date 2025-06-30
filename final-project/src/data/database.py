@@ -8,13 +8,13 @@ from typing import List
 class Database:
     """Handles all database operations."""
     def __init__(self):
-        self.db_path = Path(SETTINGS['database']['path']) # <-- Use Path object
+        self.db_path = Path(SETTINGS['database']['path']) 
         self.conn = None
 
     def __enter__(self):
         try:
-            # Ensure the parent directory exists
-            self.db_path.parent.mkdir(parents=True, exist_ok=True) # <-- Add this line
+            """Open the connection when entering a 'with' block."""
+            self.db_path.parent.mkdir(parents=True, exist_ok=True) 
             
             self.conn = sqlite3.connect(self.db_path)
             self.create_table()
